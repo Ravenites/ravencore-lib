@@ -76,9 +76,9 @@ ravencore.deps.bnjs = require('bn.js');
 ravencore.deps.bs58 = require('bs58');
 ravencore.deps.Buffer = Buffer;
 ravencore.deps.elliptic = require('elliptic');
-ravencore.deps._ = require('lodash');
-ravencore.deps.nodeX16rV2 = require('node-x16rv2');
 ravencore.deps.nodeX16r = require('node-x16r');
+ravencore.deps.nodeX16rV2 = require('node-x16rv2');
+ravencore.deps._ = require('lodash');
 
 // Internal usage, exposed for testing/advanced tweaking
 ravencore.Transaction.sighash = require('./lib/transaction/sighash');

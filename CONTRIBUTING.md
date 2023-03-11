@@ -5,10 +5,9 @@ We're working hard to make *ravencore* the most powerful JavaScript library for 
 
 ## Community
 
-If there are any questions, etc., please feel to ask in one of the community channels:
+If there are any questions, etc., please feel to ask in the #Development channel in the community discord:
 
-- https://labs.bitpay.com/c/bitcore (Support Forum)
-- https://gitter.im/bitpay/bitcore (Development Chat)
+- https://discord.gg/jn6uhur (Support Forum)
 
 ## Quick Checklist
 
@@ -101,7 +100,7 @@ These should have a matching static method that can be used for instantiation:
 * `fromString` - Should be able to instantiate with output from `toString`
 * `fromBuffer` - Should likewise be able to instantiate from output from `toBuffer`
 
-`JSON.stringify` and `JSON.parse` are expected to be handled outside of the scope of ravencore methods. For example, calling `JSON.stringify` on an ravencore object will behave as expected and call `transaction.toJSON()` and then stringify it:
+`JSON.stringify` and `JSON.parse` are expected to be handled outside of the scope of Ravencore methods. For example, calling `JSON.stringify` on a Ravencore object will behave as expected and call `transaction.toJSON()` and then stringify it:
 
 ```javascript
 var transactionString = JSON.stringify(transaction);
