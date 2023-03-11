@@ -82,6 +82,29 @@ module.exports = {
         nonce : 3812291672,
         bits : 453193653,
       }
+    },
+    { // Mainnet FilteredBlock 220639 with filter: ef580a0eb8f79711249f0fb1df5fffa7297fd85f2643a5c06f28a874af03e1c3
+      flags : [
+        175, 0
+      ],
+      numTransactions : 32,
+      hashes : [
+        "52ce9c6b303ef36ba760dd5cc64fc1b548c1776cc03e9a2801b74180645dcc2d",
+        "c4ff4cc899751c23785a9d28326f83e94a6b494ecdedff60a1c316cc7bc84beb",
+        "ef580a0eb8f79711249f0fb1df5fffa7297fd85f2643a5c06f28a874af03e1c3",
+        "d9373fd883cfc0421b8f29a9c05afba77dea489d90f757d0139967df5266f73a",
+        "3ad2f6c76c4df9bf8d07b51480366bd464e9241dc7f96686f0a8d81941f896c1",
+        "cc0a156e194ebf1ff9a7233b555f9cdcbc012cbcc6dfb362b8e26be7ba5b7e29" 
+      ],
+      header : {
+        hash: "000000000002836164c4a120395e043197b8fccecaaa6fd20621504d81f5dff1",
+        prevHash : "0000000000018eacafc2cb1271af70a7d9d216181f4c7c836927a1b3de9786b0",
+        merkleRoot : "27ec53687bb9e56465024eb30e23388e9dce29fe7254add1560295f7fcb270a4",
+        time : 1526856718,
+        version : 536870912,
+        nonce : 3812291672,
+        bits : 453193653,
+      }
     }
   ]
 };

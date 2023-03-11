@@ -157,6 +157,36 @@ describe('MerkleBlock', function() {
 
   });
 
+  describe('#filterdTxsHash', function() {
+
+    it('should validate good merkleblocks', function() {
+      var hashOfFilteredTx = 'ef580a0eb8f79711249f0fb1df5fffa7297fd85f2643a5c06f28a874af03e1c3';
+      var b = MerkleBlock(data.JSON[3]);
+      b.filterdTxsHash()[0].should.equal(hashOfFilteredTx);
+    });
+
+    it('should fail with merkleblocks with too many hashes', function() {
+      var b = MerkleBlock(data.JSON[0]);
+      // Add too many hashes
+      var i = 0;
+      while(i <= b.numTransactions) {
+        b.hashes.push('bad' + i++);
+      }
+      (function() {
+        b.filterdTxsHash();
+      }).should.throw('This MerkleBlock contain an invalid Merkle Tree');
+    });
+
+    it('should fail with merkleblocks with too few bit flags', function() {
+      var b = MerkleBlock(JSON.parse(blockJSON));
+      b.flags.pop();
+      (function() {
+        b.filterdTxsHash();
+      }).should.throw('This MerkleBlock contain an invalid Merkle Tree');
+    });
+
+  });
+
   describe('#hasTransaction', function() {
 
     it('should find transactions via hash string', function() {
